@@ -48,7 +48,7 @@ export function Welcome({ message }: { message: string }) {
 }
 
 const resources = [
-	{ text: "Links" },
+	{ type: "header", text: "Links" },
 	{ type: "separator" },
 	{
 		href: "https://tv.aidensserver.win",
@@ -69,7 +69,7 @@ const resources = [
 		type: "link",
 	},
 	{ type: "separator" },
-	{ text: "Admin Tools" },
+	{ type: "header", text: "Admin Tools" },
 	{ type: "separator" },
 	{
 		href: "https://lidarr.aidensserver.win",
