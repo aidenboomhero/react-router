@@ -48,6 +48,8 @@ export function Welcome({ message }: { message: string }) {
 }
 
 const resources = [
+	{ type: "header", text: "Links" },
+	{ type: "separator" },
 	{
 		href: "https://tv.aidensserver.win",
 		text: "Jellyfin (Movies & TV)",
@@ -66,6 +68,8 @@ const resources = [
 		icon: "🎬",
 		type: "link",
 	},
+	{ type: "separator" },
+	{ type: "header", text: "Admin Tools" },
 	{ type: "separator" },
 	{
 		href: "https://lidarr.aidensserver.win",
