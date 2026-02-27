@@ -68,9 +68,21 @@ const resources = [
 		icon: "🎬",
 		type: "link",
 	},
+	{
+		href: "https://chat.aidensserver.win",
+		text: "School Chat Room",
+		icon: "💬",
+		type: "link",
+	},
 	{ type: "separator" },
 	{ type: "header", text: "Admin Tools" },
 	{ type: "separator" },
+	{
+		href: "https://dash.cloudflare.com",
+		text: "Cloudflare",
+		icon: "🌥",
+		type: "link",
+	},
 	{
 		href: "https://lidarr.aidensserver.win",
 		text: "Lidarr(Admin)",
