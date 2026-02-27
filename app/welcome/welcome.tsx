@@ -22,7 +22,7 @@ export function Welcome({ message }: { message: string }) {
 				<div className="max-w-[300px] w-full space-y-6 px-4">
 					<nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
 						<p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-							What&apos;s next?
+							Welcome to Aiden&apos;s Server!
 						</p>
 						<ul>
 							{resources.map(({ href, text, icon }) => (
@@ -50,17 +50,46 @@ export function Welcome({ message }: { message: string }) {
 const resources = [
 	{
 		href: "https://tv.aidensserver.win",
-		text: "Jellyfin",
+		text: "Jellyfin (Movies & TV)",
 		icon: "📺",
+		type: "link",
 	},
 	{
 		href: "https://music.aidensserver.win",
 		text: "Music",
 		icon: "🎧",
+		type: "link",
 	},
 	{
 		href: "https://jelly.aidensserver.win",
 		text: "Add Movies/Shows",
 		icon: "🎬",
+		type: "link",
+	},
+	{ type: "separator" },
+	{
+		href: "https://lidarr.aidensserver.win",
+		text: "Lidarr(Admin)",
+		type: "link",
+	},
+	{
+		href: "https://sonarr.aidensserver.win",
+		text: "Sonarr(Admin)",
+		type: "link",
+	},
+	{
+		href: "https://radarr.aidensserver.win",
+		text: "Radarr(Admin)",
+		type: "link",
+	},	
+	{
+		href: "https://prowl.aidensserver.win",
+		text: "Prowlarr(Admin)",
+		type: "link",
+	},
+	{
+		href: "https://qbit.aidensserver.win",
+		text: "Qbittorrent(Admin)",
+		type: "link",
 	},
 ];
