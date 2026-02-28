@@ -84,6 +84,12 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://nextcloud.aidensserver.win",
+		text: "NextCloud (ADMIN ONLY)",
+		icon: "📁",
+		type: "link"
+	},
+	{
 		href: "https://lidarr.aidensserver.win",
 		text: "Lidarr(Admin)",
 		type: "link",
