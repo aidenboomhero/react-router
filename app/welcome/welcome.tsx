@@ -84,6 +84,12 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://port.aidensserver.win",
+		text: "Portainer",
+		icon: "📦",
+		type: "link",
+	},
+	{
 		href: "https://nextcloud.aidensserver.win",
 		text: "NextCloud (ADMIN ONLY)",
 		icon: "📁",
