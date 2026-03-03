@@ -75,9 +75,7 @@ const resources = [
 		type: "link",
 	},
 	{ type: "separator" },
-	<p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-							Admin Tool&apo;s
-						</p>
+	{ text: "Admin Tool's" },
 	{ type: "separator" },
 	{
 		href: "https://dash.cloudflare.com",
