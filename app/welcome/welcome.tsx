@@ -74,6 +74,12 @@ const resources = [
 		icon: "💬",
 		type: "link",
 	},
+	{
+		href: "https://ai.aidensserver.win",
+		text: "AI Chat",
+		icon: "🤖",
+		type: "link",
+	},
 	{ type: "separator" },
 	{ text: "Admin Tool's" },
 	{ type: "separator" },
