@@ -126,4 +126,14 @@ const resources = [
 		text: "Qbittorrent(Admin)",
 		type: "link",
 	},
+	{
+		href: "https://ssh.aidensserver.win",
+		text: "Remote Terminal",
+		type: "link",
+	},
+	{
+		href: "https://files.aidensserver.win",
+		text: "FileManager",
+		type: "link",
+	},
 ];
