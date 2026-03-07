@@ -80,6 +80,11 @@ const resources = [
 		icon: "🤖",
 		type: "link",
 	},
+	{
+		href: "https://whoogle.aidensserver.win",
+		text: "unblocker (aristotle can still see you)",
+		type: "link",
+	},
 	{ type: "separator" },
 	{ text: "Admin Tool's" },
 	{ type: "separator" },
@@ -96,28 +101,33 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://immich.aidensserver.win",
+		text: "Immich",
+		type: "link",
+	},
+	{
 		href: "https://lidarr.aidensserver.win",
-		text: "Lidarr(Admin)",
+		text: "Lidarr",
 		type: "link",
 	},
 	{
 		href: "https://sonarr.aidensserver.win",
-		text: "Sonarr(Admin)",
+		text: "Sonarr",
 		type: "link",
 	},
 	{
 		href: "https://radarr.aidensserver.win",
-		text: "Radarr(Admin)",
+		text: "Radarr",
 		type: "link",
 	},	
 	{
 		href: "https://prowl.aidensserver.win",
-		text: "Prowlarr(Admin)",
+		text: "Prowlarr",
 		type: "link",
 	},
 	{
 		href: "https://qbit.aidensserver.win",
-		text: "Qbittorrent(Admin)",
+		text: "Qbittorrent",
 		type: "link",
 	},
 	{
