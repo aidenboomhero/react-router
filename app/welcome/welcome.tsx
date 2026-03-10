@@ -80,11 +80,6 @@ const resources = [
 		icon: "🤖",
 		type: "link",
 	},
-	{
-		href: "https://whoogle.aidensserver.win",
-		text: "unblocker (aristotle can still see you)",
-		type: "link",
-	},
 	{ type: "separator" },
 	{ text: "Admin Tool's" },
 	{ type: "separator" },
@@ -108,6 +103,11 @@ const resources = [
 	{
 		href: "https://lidarr.aidensserver.win",
 		text: "Lidarr",
+		type: "link",
+	},
+	{
+		href: "https://ltube.aidensserver.win",
+		text: "Lidatube for Lidarr",
 		type: "link",
 	},
 	{
