@@ -69,6 +69,12 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://ayrr.aidensserver.win",
+		text: "Add Music",
+		icon: "🎵",
+		type: "link",
+	},
+	{
 		href: "https://chat.aidensserver.win",
 		text: "School Chat Room",
 		icon: "💬",
