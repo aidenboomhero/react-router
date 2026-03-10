@@ -69,7 +69,7 @@ const resources = [
 		type: "link",
 	},
 	{
-		href: "https://ayrr.aidensserver.win",
+		href: "https://aurr.aidensserver.win",
 		text: "Add Music",
 		icon: "🎵",
 		type: "link",
