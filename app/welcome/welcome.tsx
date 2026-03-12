@@ -135,4 +135,9 @@ const resources = [
 		text: "FileManager",
 		type: "link",
 	},
+	{
+		href: "https://gotif.aidensserver.win",
+		text: "Gotify",
+		type: "link",
+	},
 ];
