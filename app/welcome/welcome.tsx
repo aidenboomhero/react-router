@@ -64,14 +64,8 @@ const resources = [
 	},
 	{
 		href: "https://jelly.aidensserver.win",
-		text: "Add Movies/Shows",
+		text: "Add Movies/Shows/ and now MUSIC",
 		icon: "🎬",
-		type: "link",
-	},
-	{
-		href: "https://aurr.aidensserver.win",
-		text: "Add Music",
-		icon: "🎵",
 		type: "link",
 	},
 	{
@@ -109,11 +103,6 @@ const resources = [
 	{
 		href: "https://lidarr.aidensserver.win",
 		text: "Lidarr",
-		type: "link",
-	},
-	{
-		href: "https://ltube.aidensserver.win",
-		text: "Lidatube for Lidarr",
 		type: "link",
 	},
 	{
