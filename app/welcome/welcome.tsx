@@ -81,7 +81,7 @@ const resources = [
 		type: "link",
 	},
 	{ type: "separator" },
-	{ text: "Admin Tool's" },
+	{ text: "Admin Links" },
 	{ type: "separator" },
 	{
 		href: "https://dash.cloudflare.com",
@@ -98,8 +98,18 @@ const resources = [
 	{
 		href: "https://immich.aidensserver.win",
 		text: "Immich",
+		icon: "📷",
 		type: "link",
 	},
+	{
+		href: "https://files.aidensserver.win",
+		text: "Files",
+		icon: "🗂️",
+		type: "link",
+	},
+	{ type: "separator" },
+	{ text: "Admin Tool's" },
+	{ type: "separator" },
 	{
 		href: "https://lidarr.aidensserver.win",
 		text: "Lidarr",
@@ -128,11 +138,6 @@ const resources = [
 	{
 		href: "https://ssh.aidensserver.win",
 		text: "Remote Terminal",
-		type: "link",
-	},
-	{
-		href: "https://files.aidensserver.win",
-		text: "FileManager",
 		type: "link",
 	},
 	{
