@@ -107,6 +107,12 @@ const resources = [
 		icon: "🗂️",
 		type: "link",
 	},
+	{
+		href: "https://cnvx.aidensserver.win",
+		text: "File Converter",
+		icon: "🔄",
+		type: "link",
+	},
 	{ type: "separator" },
 	{ text: "Admin Tool's" },
 	{ type: "separator" },
