@@ -69,6 +69,12 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://mc.aidensserver.win",
+		text: "PLAY MINECRAFT!!",
+		icon: "⛏",
+		type: "link",
+	},
+	{
 		href: "https://chat.aidensserver.win",
 		text: "School Chat Room",
 		icon: "💬",
@@ -139,6 +145,11 @@ const resources = [
 	{
 		href: "https://qbit.aidensserver.win",
 		text: "Qbittorrent",
+		type: "link",
+	},
+	{
+		href: "https://mcstats.aidensserver.win",
+		text: "MC Server Stats",
 		type: "link",
 	},
 	{
