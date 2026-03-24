@@ -148,6 +148,11 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://slskd.aidensserver.win",
+		text: "slskd",
+		type: "link,
+	},
+	{
 		href: "https://mcstats.aidensserver.win",
 		text: "MC Server Stats",
 		type: "link",
