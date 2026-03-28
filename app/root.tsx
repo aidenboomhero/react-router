@@ -23,36 +23,50 @@ export const links: Route.LinksFunction = () => [
 	},
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
-	return (
-		<html lang="en">
-			<head>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<Meta />
-				<Links />
-			</head>
-			<body>
-				{children}
-				<ScrollRestoration />
-				<Scripts />
-                <script dangerouslySetInnerHTML={{ __html: `
-                (function(mvfw){
-                 var d = document,
-                     s = d.createElement('script'),
-                     l = d.scripts[d.scripts.length - 1];
-                 s.settings = mvfw || {};
-                 s.src = "\/\/conventionalresponse.com\/blX.VIs\/dhGOl_0UYdWWcw\/JeTm\/9WuqZDUZl\/kAPaTtYN5\/MCDOUg5\/NUzicJt\/NxjOkJwJNUT-kI4LMXQz";
-                 s.async = true;
-                 s.referrerPolicy = 'no-referrer-when-downgrade';
-                 l.parentNode.insertBefore(s, l);
-                })({})
-			 `}} />
-			</body>
-		</html>
-	);
-}
+import { useEffect } from "react";
 
+export function Layout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // This only runs on the client (browser) after hydration
+    const script = document.createElement('script');
+    const scriptContent = `
+      (function(mvfw){
+        var d = document,
+            s = d.createElement('script');
+        s.settings = mvfw || {};
+        s.src = "//conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+        d.body.appendChild(s);
+      })({})
+    `;
+    script.innerHTML = scriptContent;
+    document.body.appendChild(script);
+
+    return () => {
+      // Optional: clean up if the layout unmounts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 export default function App() {
 	return <Outlet />;
 }
