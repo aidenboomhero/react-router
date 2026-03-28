@@ -26,28 +26,19 @@ export const links: Route.LinksFunction = () => [
 import { useEffect } from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "//conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
-    script.async = true;
-    script.referrerPolicy = 'no-referrer-when-downgrade';
-    
-    // Some providers need this settings object to be defined on the window
-    window.mvfw = {}; 
-
-    document.body.appendChild(script);
-}, []);
-    `;
-    script.innerHTML = scriptContent;
-    document.body.appendChild(script);
-
-    return () => {
-      // Optional: clean up if the layout unmounts
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
+  // Use a hook to safely inject the script only on the client side
+  if (typeof document !== "undefined") {
+    const scriptId = "ad-script-main";
+    if (!document.getElementById(scriptId)) {
+      const s = document.createElement("script");
+      s.id = scriptId;
+      // Using a standard string to avoid esbuild parsing issues
+      s.src = "https://conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
+      s.async = true;
+      s.referrerPolicy = "no-referrer-when-downgrade";
+      document.body.appendChild(s);
+    }
+  }
 
   return (
     <html lang="en">
