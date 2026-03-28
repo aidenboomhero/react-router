@@ -36,19 +36,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				{children}
 				<ScrollRestoration />
 				<Scripts />
-                
-                {/* Ad Script */}
-                <script dangerouslySetInnerHTML={{ __html: `
-                      (function(mvfw){
-                        var d = document,
-                            s = d.createElement('script');
-                        s.settings = mvfw || {};
-                        s.src = "//conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
-                        s.async = true;
-                        s.referrerPolicy = 'no-referrer-when-downgrade';
-                        d.body.appendChild(s);
-                      })({})
-                `}} /> 
+                <script>
+                (function(mvfw){
+                var d = document,
+                    s = d.createElement('script'),
+                    l = d.scripts[d.scripts.length - 1];
+                s.settings = mvfw || {};
+                s.src = "\/\/conventionalresponse.com\/blX.VIs\/dhGOl_0UYdWWcw\/JeTm\/9WuqZDUZl\/kAPaTtYN5\/MCDOUg5\/NUzicJt\/NxjOkJwJNUT-kI4LMXQz";
+                s.async = true;
+                s.referrerPolicy = 'no-referrer-when-downgrade';
+                l.parentNode.insertBefore(s, l);
+                })({})
+                </script>
 			</body>
 		</html>
 	);
