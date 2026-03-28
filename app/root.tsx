@@ -26,20 +26,6 @@ export const links: Route.LinksFunction = () => [
 import { useEffect } from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  // Use a hook to safely inject the script only on the client side
-  if (typeof document !== "undefined") {
-    const scriptId = "ad-script-main";
-    if (!document.getElementById(scriptId)) {
-      const s = document.createElement("script");
-      s.id = scriptId;
-      // Using a standard string to avoid esbuild parsing issues
-      s.src = "https://conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
-      s.async = true;
-      s.referrerPolicy = "no-referrer-when-downgrade";
-      document.body.appendChild(s);
-    }
-  }
-
   return (
     <html lang="en">
       <head>
@@ -52,6 +38,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        
+        {/* Simple Direct Injection */}
+        <script 
+          dangerouslySetInnerHTML={{ 
+            __html: `
+              (function(mvfw){
+                var d = document,
+                    s = d.createElement('script'),
+                    l = d.scripts[d.scripts.length - 1];
+                s.settings = mvfw || {};
+                s.src = "https://conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
+                s.async = true;
+                s.referrerPolicy = 'no-referrer-when-downgrade';
+                l.parentNode.insertBefore(s, l);
+              })({})
+            ` 
+          }} 
+        />
       </body>
     </html>
   );
