@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				{children}
 				<ScrollRestoration />
 				<Scripts />
-                <script>
+                <script dangerouslySetInnerHTML={{ __html: `
                 (function(mvfw){
                  var d = document,
                      s = d.createElement('script'),
@@ -47,7 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                  s.referrerPolicy = 'no-referrer-when-downgrade';
                  l.parentNode.insertBefore(s, l);
                 })({})
-                </script>
+			 `}} />
 			</body>
 		</html>
 	);
