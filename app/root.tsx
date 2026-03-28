@@ -27,18 +27,16 @@ import { useEffect } from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // This only runs on the client (browser) after hydration
     const script = document.createElement('script');
-    const scriptContent = `
-      (function(mvfw){
-        var d = document,
-            s = d.createElement('script');
-        s.settings = mvfw || {};
-        s.src = "//conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        d.body.appendChild(s);
-      })({})
+    script.src = "//conventionalresponse.com/blX.VIs/dhGOl_0UYdWWcw/JeTm/9WuqZDUZl/kAPaTtYN5/MCDOUg5/NUzicJt/NxjOkJwJNUT-kI4LMXQz";
+    script.async = true;
+    script.referrerPolicy = 'no-referrer-when-downgrade';
+    
+    // Some providers need this settings object to be defined on the window
+    window.mvfw = {}; 
+
+    document.body.appendChild(script);
+}, []);
     `;
     script.innerHTML = scriptContent;
     document.body.appendChild(script);
