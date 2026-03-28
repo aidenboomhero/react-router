@@ -150,7 +150,12 @@ const resources = [
 	{
 		href: "https://slskd.aidensserver.win",
 		text: "slskd",
-		type: "link,
+		type: "link",
+	},
+	{
+		href: "https://aurr.aidensserver.win",
+		text: "aurral",
+		type: "link",
 	},
 	{
 		href: "https://mcstats.aidensserver.win",
