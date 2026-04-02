@@ -75,6 +75,12 @@ const resources = [
 		type: "link",
 	},
 	{
+		href: "https://shop.aidensserver.win",
+		text: "BUY MC STUFF",
+		icon: "🛒",
+		type: "link",
+	},
+	{
 		href: "https://chat.aidensserver.win",
 		text: "School Chat Room",
 		icon: "💬",
