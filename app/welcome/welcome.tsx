@@ -96,6 +96,12 @@ const resources = [
 	{ text: "Admin Links" },
 	{ type: "separator" },
 	{
+		href: "https://dash.aidensserver.win",
+		text: "dash",
+		icon: "🖥",
+		type: "link",
+	},
+	{
 		href: "https://dash.cloudflare.com",
 		text: "Cloudflare",
 		icon: "🌥",
